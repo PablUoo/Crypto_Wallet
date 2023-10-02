@@ -4,8 +4,12 @@ module ApplicationHelper
       date_us.strftime("%d/%m/%Y")
   end
 
-  def nome_aplicacao
+  def nome_da_aplicacao
     "Crypto Wallet"
+  end
+
+  def criador
+    "Pablo Aurelio Melo Almeida"
   end
 
 
