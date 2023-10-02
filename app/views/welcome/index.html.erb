@@ -2,7 +2,6 @@
 
 <p><strong>Data:</strong><%= date_br(Date.today) %></p>
 
-    <td><%=link_to 'Coins', coins_path%></td>
-    <td><%=link_to 'Criar Moeda', new_coin_path%></td>
+<%= render "menu"%>
 
-    <p>Você esta no ambiente de <strong><%= ambiente_rails %></strong></p>
+<p>Você esta no ambiente de <strong><%= ambiente_rails %></strong></p>
