@@ -7,7 +7,17 @@
 
 <p>
   <strong>Codigo:</strong>
-  <%= @coin.acronym %>
+  <%= @coin.acronym%>
+</p>
+
+<p>
+  <strong>Data de Criação:</strong>
+  <%= @coin.created_at.to_s(:data_Formatada) %>
+</p>
+
+<p>
+  <strong>Data de Atualização:</strong>
+  <%= @coin.updated_at.to_s(:data_Formatada)  %>
 </p>
 
 <p>
