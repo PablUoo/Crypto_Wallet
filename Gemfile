@@ -1,33 +1,115 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
-
-gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
+gem 'rails', '~>6.1.4.1'
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
-gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pry-rails'
-
-group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+gem 'rails-assets-jquery'
+gem 'rails-assets-jquery-ujs'
+gem 'rails-assets-jquery-validate'
+gem 'rails-assets-jquery-form'
+gem 'rails-assets-jquery-mask-plugin'
+gem 'rails-assets-jsbarcode'
+gem 'rails-assets-chained'
+gem 'rails-assets-fastclick'
+gem 'rails-assets-mousetrap'
+gem 'rails-assets-animate-css'
+gem 'rails-assets-c3js-chart'
+gem 'rails-assets-echarts', '5.3.3'
+gem 'rails-assets-dispatcher'
+gem 'rails-assets-blueimp-tmpl'
+gem 'rails-assets-select2', '3.5.4'
+gem 'rails-assets-smalot-bootstrap-datetimepicker'
+gem 'rails-assets-bootstrap-toggle'
+gem 'rails-assets-momentjs'
+gem 'rack-cors' #p/ funciona o app na rede local
+gem 'sassc-rails'
+gem 'sassc'
+gem 'thinreports'
+gem 'pg'
+gem 'pghero'
+gem 'makara'
+gem 'simple_form'
+gem 'show_for'
+gem 'inherited_resources', github: 'rhiroshi/inherited_resources', branch: 'api_support'
+gem 'devise-security', github: 'devise-security/devise-security'
+gem 'devise'
+gem 'devise_token_auth'
+gem 'kaminari'
+gem 'ransack'
+gem 'nested_form', github: 'rhiroshi/nested_form'
+# gem 'client_side_validations'
+gem 'delocalize'
+gem 'activejob-status'
+gem 'activejob-traffic_control'
+gem 'i18n-js'
+gem 'default_value_for', github: 'FooBarWidget/default_value_for'
+gem 'carrierwave'
+gem 'image_size'
+gem 'image_optimizer'
+gem 'pdfkit', github: 'rhiroshi/pdfkit'
+gem 'combine_pdf'
+gem 'nokogiri'
+gem 'fast_jsonparser'
+gem 'oj'
+gem 'ofx', github: 'fernandoluizao/ofx'
+gem 'roo'
+gem 'caxlsx'
+gem 'exception_notification'
+gem 'sidekiq'
+gem 'sidekiq-history'
+gem 'bootstrap-sass'
+gem 'bh'
+gem 'font-awesome-sass', '~>5.15.1'
+gem 'bootswatch-rails'
+gem 'nprogress-rails'
+gem 'jbuilder'
+gem 'dotenv-rails'
+gem 'whenever'
+gem 'rack-mobile-detect', require: 'rack/mobile-detect'
+gem 'lograge'
+gem 'bootsnap', require: false
+gem 'rmodbus'
+gem 'pdf-reader', '~>2.2.1'
+gem 'decimal-js-rails'
+gem 'sprockets', '~>3.7.2'
+gem 'fast_excel', github: 'rhiroshi/fast_excel'
+# gem 'docusign_esign' # Retirado pois não estão utilizando..
+gem 'rqrcode'
+gem "typhoeus"
+gem 'elastic-apm'
+gem "sidekiq-worker-killer"
+gem 'scenic'
+gem 'jquery-tablesorter' # https://github.com/themilkman/jquery-tablesorter-rails -> https://github.com/Mottie/tablesorter
+gem 'rack-attack'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'passenger'
+  gem 'annotate'
+  gem 'bullet'
+  gem 'immigrant'
+  gem 'test-unit'
+  gem 'web-console'
+  gem 'derailed_benchmarks'
+end
+group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'faker'
+  gem 'guard'
+  gem 'guard-rspec', require: false
 end
 
-group :test do
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'closure-compiler', github: 'rhiroshi/closure-compiler'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

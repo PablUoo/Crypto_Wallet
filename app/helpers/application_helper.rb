@@ -21,6 +21,4 @@ module ApplicationHelper
       "Teste"
     end
   end
-
-
 end

@@ -1,16 +1,38 @@
-default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+production:
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  database: crypto_production
+  host: localhost
+  port: 5432
 
 development:
-  <<: *default
-  database: db/development.sqlite3
-
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  database: crypto_development
+  host: localhost
+  port: 5432
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  database: crypto_test
+  host: localhost
+  port: 5432
+# default: &default
+#   adapter: sqlite3
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+# development:
+#   <<: *default
+#   database: db/development.sqlite3
+
+# test:
+#   <<: *default
+#   database: db/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
