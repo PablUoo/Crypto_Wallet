@@ -10,6 +10,8 @@ gem 'jquery-rails',                 '4.2.1'
 gem 'turbolinks',                   '~> 5'
 gem 'bcrypt',                       '~> 3.1.7'
 gem 'bootstrap-sass',               '3.4.1'
+gem 'bootsnap'
+gem 'passenger'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
